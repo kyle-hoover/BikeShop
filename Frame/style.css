@@ -1,7 +1,18 @@
 body {
 	background-color: blue;
+	width: 100%;
+    	height: 100%;
+    	margin: 0px;
+    	padding: 0px;
+    	overflow-x: hidden;
 }
 
 h1 {
 	text-align: center;
+}
+
+.intro {
+	background-image: url("https://images.unsplash.com/photo-1589100984317-79246528923c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80");
+	background-size: cover;
+	height: 550px;
 }
