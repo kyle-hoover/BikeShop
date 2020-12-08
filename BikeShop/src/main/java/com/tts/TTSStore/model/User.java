@@ -11,7 +11,7 @@ import javax.validation.constraints.NotEmpty;
 import org.springframework.security.core.GrantedAuthority;
 
 //Extend the UserDetails class from Spring Security.
-public class User extends UserDetails{
+public class User extends UserDetails{ //testing github
 	//Auto-generated id
 	@Id
 	private Long id;
