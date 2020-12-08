@@ -6,20 +6,125 @@
 	<title></title>
   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="style.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/bd728d366b.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<h1>Title, a premium mountain bike shopping experience</h1>
-  	<p>Hello, world!</p>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  		<a class="navbar-brand">Title</a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      	<li class="nav-item active">
+		        	<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+		      	</li>
+		      	<li class="nav-item">
+		        	<a class="nav-link" href="#">Reviews</a>
+		      	</li>
+		      	<li class="nav-item">
+		        	<a class="nav-link" href="#">Cart</a>
+		      	</li>
+		      	<!--<li class="nav-item">
+		        	<a class="nav-link" href="#">Disabled</a>
+		      	</li>-->
+		    </ul>
+	  	</div>
+	</nav>
 
-  	<div class="card text-center" style="width: 18rem;">
-  		<img class="card-img-top" src="..." alt="bike1">
-		<div class="card-body">
-			<h5 class="card-title">Card title</h5>
-		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	<!--Intro-->
+	<div class = "intro">
+
+		<h1>Title, a premium mountain bike shopping experience</h1>
+
+	</div>
+
+  	<!--Products-->
+  	<div class="row">
+	  	<div class="col-sm-4">
+	    	<div class="card text-center">
+	    		<img class="card-img-top" src="https://images.unsplash.com/photo-1545565319-e1b6be69a9a2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" alt="bike1">
+	      		<div class="card-body">
+	        		<h5 class="card-title">The Bike 1</h5>
+	        		<p class="card-text">A sleek chrome design perfect for urban exploration.</p>
+	        		<a href="#" class="btn btn-primary">Add To Cart <i class="fas fa-cart-plus"></i></a>
+	      		</div>
+	    	</div>
+	  	</div>
+	  	<div class="col-sm-4">
+	    	<div class="card text-center">
+	    		<img class="card-img-top" src="https://images.unsplash.com/photo-1575585269294-7d28dd912db8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="bike2">
+	      		<div class="card-body">
+	        		<h5 class="card-title">The Bike 2</h5>
+	        		<p class="card-text">A light frame and tough design just right for easy offroading.</p>
+	        		<a href="#" class="btn btn-primary">Add To Cart <i class="fas fa-cart-plus"></i></a>
+	      		</div>
+	    	</div>
+	  	</div>
+	  	<div class="col-sm-4">
+	    	<div class="card text-center">
+	    		<img class="card-img-top" src="https://images.unsplash.com/photo-1597600175385-3d3d3df0e63a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2509&q=80" alt="bike3">
+	      		<div class="card-body">
+	        		<h5 class="card-title">The Bike 3</h5>
+	        		<p class="card-text">A simple design that's perfect for both seasoned off-roaders and beginners alike.</p>
+	        		<a href="#" class="btn btn-primary">Add To Cart <i class="fas fa-cart-plus"></i></a>
+	      		</div>
+	    	</div>
+	  	</div>
+	</div>
+	<!--Row 2-->
+	<div class="row">
+	  	<div class="col-sm-4">
+	    	<div class="card text-center">
+	    		<img class="card-img-top" src="https://images.unsplash.com/photo-1599011711123-87b2959bc8a3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1491&q=80" alt="bike4">
+	      		<div class="card-body">
+	        		<h5 class="card-title">The Bike 4</h5>
+	        		<p class="card-text">Patented bend-not-break technology that can handle even the roughest of trails.</p>
+	        		<a href="#" class="btn btn-primary">Add To Cart <i class="fas fa-cart-plus"></i></a>
+	      		</div>
+	    	</div>
+	  	</div>
+	  	<div class="col-sm-4">
+	    	<div class="card text-center">
+	    		<img class="card-img-top" src="https://images.unsplash.com/photo-1563034211-c13519685e85?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="bike5">
+	      		<div class="card-body">
+	        		<h5 class="card-title">The Bike 5</h5>
+	        		<p class="card-text">A flexible design that serves both extreme offroaders and casual bikers.</p>
+	        		<a href="#" class="btn btn-primary">Add To Cart <i class="fas fa-cart-plus"></i></a>
+	      		</div>
+	    	</div>
+	  	</div>
+	  	<div class="col-sm-4">
+	    	<div class="card text-center">
+	    		<img class="card-img-top" src="https://images.unsplash.com/photo-1601652290550-35f8ff80b51f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80" alt="bike6">
+	      		<div class="card-body">
+	        		<h5 class="card-title">The Bike 6</h5>
+	        		<p class="card-text">A heavy chassis designed to take on any terrain thrown at it.</p>
+	        		<a href="#" class="btn btn-primary">Add To Cart <i class="fas fa-cart-plus"></i></a>
+	      		</div>
+	    	</div>
+	  	</div>
+	</div>
+
+
+	<!--
+	<div class="card text-center">
+  		<div class="card-header">
+    		Featured
+  		</div>
+  		<div class="card-body">
+  			<img class="card-img-top" src="..." alt="bike6">
+		    <h5 class="card-title">Special title treatment</h5>
+		    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 		    <a href="#" class="btn btn-primary">Go somewhere</a>
 		</div>
-	</div>
+  		<div class="card-footer text-muted">
+    		2 days ago
+  		</div>
+	</div> -->
 
   	<script src="script.js"></script>
   	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
