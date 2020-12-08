@@ -11,7 +11,11 @@ import javax.validation.constraints.NotEmpty;
 import org.springframework.security.core.GrantedAuthority;
 
 //Extend the UserDetails class from Spring Security.
+<<<<<<< Updated upstream:TTSStore/src/main/java/com/tts/TTSStore/model/User.java
 public class User extends UserDetails{
+=======
+public class User extends UserDetails{ //testing
+>>>>>>> Stashed changes:BikeShop/src/main/java/com/tts/TTSStore/model/User.java
 	//Auto-generated id
 	@Id
 	private Long id;
