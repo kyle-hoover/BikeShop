@@ -28,7 +28,7 @@ public class User extends UserDetails{
 	//A Map that uses Product and Integer pairs called "cart" that is implemented by a HashMap.
 	//Use the `@ElementCollection` tag: It basically makes the map into a table with a Foreign Key to a Product and the quantity as a number without making a new model. (very similar to @OneToMany)
 	@ElementCollection
-	HashMap<String, Integer> cart = new HashMap<String, Integer>();
+	HashMap<Product, Integer> cart = new HashMap<Product, Integer>();
 
 	// UserDetails requires these, they are technically getters (is-ers?) overridden by Lombok.
 	// @Transient Makes it so these aren't persisted in the database, as they are hard coded.
@@ -64,11 +64,11 @@ public class User extends UserDetails{
 		this.password = password;
 	}
 
-	public HashMap<String, Integer> getCart() {
+	public HashMap<Product, Integer> getCart() {
 		return cart;
 	}
 
-	public void setCart(HashMap<String, Integer> cart) {
+	public void setCart(HashMap<Product, Integer> cart) {
 		this.cart = cart;
 	}
 }
