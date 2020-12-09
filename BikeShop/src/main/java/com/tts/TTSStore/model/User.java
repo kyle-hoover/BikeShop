@@ -46,4 +46,29 @@ public class User extends UserDetails{
 	  
 	@Transient
 	private Collection<GrantedAuthority> authorities = null;
+
+	//creating getters and settters to try to resolve errors in other classes
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public HashMap<String, Integer> getCart() {
+		return cart;
+	}
+
+	public void setCart(HashMap<String, Integer> cart) {
+		this.cart = cart;
+	}
 }

@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.tts.TTSStore.model.Product;
+import com.tts.TTSStore.services.ProductService;
+
 import lombok.Data;
 
 @Data
