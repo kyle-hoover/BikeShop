@@ -2,6 +2,7 @@ package com.tts.TTSStore.model;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Id;
@@ -9,10 +10,11 @@ import javax.persistence.Transient;
 import javax.validation.constraints.NotEmpty;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 //Extend the UserDetails class from Spring Security.
 
-public class User extends UserDetails{
+public class User implements UserDetails{
 
 	//Auto-generated id
 	@Id
@@ -28,7 +30,7 @@ public class User extends UserDetails{
 	//A Map that uses Product and Integer pairs called "cart" that is implemented by a HashMap.
 	//Use the `@ElementCollection` tag: It basically makes the map into a table with a Foreign Key to a Product and the quantity as a number without making a new model. (very similar to @OneToMany)
 	@ElementCollection
-	HashMap<Product, Integer> cart = new HashMap<Product, Integer>();
+	private Map<Product, Integer> cart;
 
 	// UserDetails requires these, they are technically getters (is-ers?) overridden by Lombok.
 	// @Transient Makes it so these aren't persisted in the database, as they are hard coded.
@@ -64,11 +66,41 @@ public class User extends UserDetails{
 		this.password = password;
 	}
 
-	public HashMap<Product, Integer> getCart() {
+	public Map<Product, Integer> getCart() {
 		return cart;
 	}
 
-	public void setCart(HashMap<Product, Integer> cart) {
+	public void setCart(Map<Product, Integer> cart) {
 		this.cart = cart;
+	}
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
