@@ -1,10 +1,10 @@
 package com.tts.TTSStore.model;
 
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
 
 import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotEmpty;
@@ -12,8 +12,18 @@ import javax.validation.constraints.NotEmpty;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 //Extend the UserDetails class from Spring Security.
 
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class User implements UserDetails{
 
 	//Auto-generated id

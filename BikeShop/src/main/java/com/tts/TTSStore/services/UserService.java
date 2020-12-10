@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.tts.TTSStore.model.Product;
 import com.tts.TTSStore.model.User;
+import com.tts.TTSStore.repository.RoleRepository;
 import com.tts.TTSStore.repository.UserRepository;
 
 @Service
@@ -20,6 +21,17 @@ public class UserService implements UserDetailsService {
     private UserRepository userRepository;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+    @Autowired
+    private RoleRepository roleRepository;
+    
+    @Autowired
+    public UserService(UserRepository userRepository, 
+                       RoleRepository roleRepository,
+                       BCryptPasswordEncoder bCryptPasswordEncoder) {
+        this.userRepository = userRepository;
+        this.roleRepository = roleRepository;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
 
     public User findByUsername(String username) {
         return userRepository.findByUsername(username);
