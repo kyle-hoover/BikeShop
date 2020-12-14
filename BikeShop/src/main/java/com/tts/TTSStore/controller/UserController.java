@@ -40,7 +40,6 @@ public class UserController {
 
 		User loggedInUser = userService.getLoggedInUser();
 
-
 		if (filter == null) {
 			filter = "all";
 		}
