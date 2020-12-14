@@ -1,5 +1,6 @@
 package com.tts.TTSStore.controller;
 
+//not all imports used error, but using imports from in class example
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,10 +9,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.tts.TTSStore.model.Product;
+import com.tts.TTSStore.model.User;
 import com.tts.TTSStore.services.ProductService;
+import com.tts.TTSStore.services.UserService;
 
 import lombok.Data;
 
@@ -21,9 +25,12 @@ import lombok.Data;
 public class MainController {
     @Autowired
     ProductService productService;
+    
+    @Autowired
+    UserService userService;
 
     @GetMapping("/")
-    public String main() {
+    public String main(Model model) {
         return "main";
     }
 
