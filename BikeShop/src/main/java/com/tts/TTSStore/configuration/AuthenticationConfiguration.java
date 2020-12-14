@@ -32,7 +32,7 @@ class AuthenticationController {
       String password = user.getPassword();
       if(submit.equals("up")) {
           if(userService.findByUsername(user.getUsername()) == null) {
-              userService.saveNew(user);
+              userService.saveNewUser(user);
           } else {
               bindingResult.rejectValue("username", "error.user", "Username is already taken.");
               return "signin";
