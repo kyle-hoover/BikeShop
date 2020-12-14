@@ -33,4 +33,3 @@ public class ProductController {
         return "redirect:/product/" + product.getId();
     }
 }
-
