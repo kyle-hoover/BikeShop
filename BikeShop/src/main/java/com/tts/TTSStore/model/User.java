@@ -173,19 +173,18 @@ public class User implements UserDetails{
 @Entity
 public class User implements UserDetails{
 	
-	
 	// UserDetails requires these, they are technically getters (is-ers?) overridden by Lombok.
-	  // @Transient Makes it so these aren't persisted in the database, as they are hard coded.
-	  @Transient
-	  private final boolean accountNonExpired = true;
-	  @Transient
-	  private boolean accountNonLocked = true;
-	  @Transient
-	  private boolean credentialsNonExpired = true;
-	  @Transient
-	  private boolean enabled = true;
-	  @Transient
-	  private Collection<GrantedAuthority> authorities = null;
+	// @Transient Makes it so these aren't persisted in the database, as they are hard coded.
+	@Transient
+	private final boolean accountNonExpired = true;
+	@Transient
+	private boolean accountNonLocked = true;
+	@Transient
+	private boolean credentialsNonExpired = true;
+	@Transient
+	private boolean enabled = true;
+	@Transient
+	private Collection<GrantedAuthority> authorities = null;
 	
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
